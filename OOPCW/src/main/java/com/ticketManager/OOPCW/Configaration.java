@@ -1,8 +1,7 @@
 package com.ticketManager.OOPCW;
 
-import java.io.Serializable;
 
-public class Configaration implements Serializable {
+public class Configaration {
     private int totalTickets;
     private int ticketReleaseRate;
     private int customerRetrievalRate;

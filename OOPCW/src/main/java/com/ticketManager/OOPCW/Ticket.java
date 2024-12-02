@@ -4,14 +4,29 @@ public class Ticket {
     //instance variables
     private int ticketID;
     private double ticketPrice;
-    private String ticketType;
+
 
     //constructor
-    public Ticket(int ticketID, double ticketPrice, String ticketType) {
+    public Ticket(int ticketID, double ticketPrice) {
         this.ticketID = ticketID;
         this.ticketPrice = ticketPrice;
-        this.ticketType = ticketType;
+
     }
 
-    //
+    //getters and setters
+    public int getTicketID() {
+        return ticketID;
+    }
+
+    public void setTicketID(int ticketID) {
+        this.ticketID = ticketID;
+    }
+
+    public double getTicketPrice() {
+        return ticketPrice;
+    }
+
+    public void setTicketPrice(double ticketPrice) {
+        this.ticketPrice = ticketPrice;
+    }
 }

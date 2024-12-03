@@ -19,5 +19,8 @@ public class Main {
 
         System.out.print("Enter maximum ticket capacity ");
         int maximumTicketCapacity = scan.nextInt();
+
+        //instantiate a configaration object
+        Configaration configaration = new Configaration(totalTickets, ticketReleaseRate, customerRetrievalRate, maximumTicketCapacity);
     }
 }

@@ -15,11 +15,18 @@ public class Vendor implements Runnable{
     public void run() {
         int ticketCount = 1;
         while (true){
-            for (int i = 0; i < ticketReleaseRate; i++){
-                String ticketID = "T" + ticketCount;
-                Ticket ticket = new Ticket(ticketID, 2000);
-                ticketPool.addTicket(ticket); // add ticket to the pool
+            try {
+                for (int i = 0; i < ticketReleaseRate; i++){
+                    String ticketID = "T" + ticketCount;
+                    Ticket ticket = new Ticket(ticketID, 2000);
+                    ticketPool.addTicket(ticket); // add ticket to the pool
+                }
+                Thread.sleep(2000); //simulate delay before next ticket release
+            }catch (InterruptedException e){
+                Thread.currentThread().interrupt();
+                break; //exit loop on interruption
             }
+
         }
     }
 }

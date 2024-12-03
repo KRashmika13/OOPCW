@@ -14,8 +14,10 @@ public class Main {
         System.out.print("Please enter ticket release rate for vendor(): ");
         int ticketReleaseRate = scan.nextInt();
 
+        System.out.println("Enter the customer retrieval rate: ");
+        int customerRetrievalRate = scan.nextInt();
+
         System.out.print("Enter maximum ticket capacity ");
         int maximumTicketCapacity = scan.nextInt();
-
     }
 }

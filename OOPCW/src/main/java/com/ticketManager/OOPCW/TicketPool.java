@@ -27,7 +27,7 @@ public class TicketPool {
     }
 
     //method to remove a ticket from the pool
-    public synchronized void removeTicket() {
+    public synchronized Ticket removeTicket() {
         while (tickets.isEmpty()){
             try {
                 System.out.println("Waiting for tickets");

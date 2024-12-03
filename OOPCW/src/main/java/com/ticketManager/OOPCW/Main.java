@@ -20,7 +20,7 @@ public class Main {
         System.out.print("Enter maximum ticket capacity ");
         int maximumTicketCapacity = scan.nextInt();
 
-        //instantiate a configaration object
-        Configaration configaration = new Configaration(totalTickets, ticketReleaseRate, customerRetrievalRate, maximumTicketCapacity);
+        //instantiate a configuration object
+        Configuration configuration = new Configuration(totalTickets, ticketReleaseRate, customerRetrievalRate, maximumTicketCapacity);
     }
 }

@@ -1,13 +1,13 @@
 package com.ticketManager.OOPCW;
 
 
-public class Configaration {
+public class Configuration {
     private int totalTickets;
     private int ticketReleaseRate;
     private int customerRetrievalRate;
     private int maxTicketCapacity;
 
-    public Configaration(int totalTickets, int ticketReleaseRate, int customerRetrievalRate, int maxTicketCapacity) {
+    public Configuration(int totalTickets, int ticketReleaseRate, int customerRetrievalRate, int maxTicketCapacity) {
         this.totalTickets = totalTickets;
         this.ticketReleaseRate = ticketReleaseRate;
         this.customerRetrievalRate = customerRetrievalRate;

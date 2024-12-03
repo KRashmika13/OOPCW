@@ -7,5 +7,10 @@ public class Customer implements Runnable {
 
     @Override
     public void run() {
+        while (true) {
+            for(int i = 0; i < customerRetrievalRate; i++) {
+                Ticket ticket = ticketPool.removeTicket();
+            }
+        }
     }
 }

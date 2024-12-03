@@ -10,8 +10,16 @@ public class Vendor implements Runnable{
         this.ticketPool = ticketPool;
         this.ticketReleaseRate = ticketReleaseRate;
     }
+
     @Override
     public void run() {
-
+        int ticketCount = 1;
+        while (true){
+            for (int i = 0; i < ticketReleaseRate; i++){
+                String ticketID = "T" + ticketCount;
+                Ticket ticket = new Ticket(ticketID, 2000);
+                ticketPool.addTicket(ticket); // add ticket to the pool
+            }
+        }
     }
 }

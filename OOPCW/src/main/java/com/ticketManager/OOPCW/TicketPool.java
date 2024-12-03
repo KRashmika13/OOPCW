@@ -25,4 +25,16 @@ public class TicketPool {
             }
         }
     }
+
+    //method to remove a ticket from the pool
+    public synchronized void removeTicket(Ticket ticket) {
+        while (tickets.isEmpty()){
+            try {
+                System.out.println("Waiting for tickets");
+                wait();
+            }catch (InterruptedException e){
+                Thread.currentThread().interrupt();
+            }
+        }
+    }
 }

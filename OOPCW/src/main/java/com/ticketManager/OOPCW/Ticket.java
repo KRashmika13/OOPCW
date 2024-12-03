@@ -2,23 +2,23 @@ package com.ticketManager.OOPCW;
 
 public class Ticket {
     //instance variables
-    private int ticketID;
+    private String ticketID;
     private double ticketPrice;
 
 
     //constructor
-    public Ticket(int ticketID, double ticketPrice) {
+    public Ticket(String ticketID, double ticketPrice) {
         this.ticketID = ticketID;
         this.ticketPrice = ticketPrice;
 
     }
 
     //getters and setters
-    public int getTicketID() {
+    public String getTicketID() {
         return ticketID;
     }
 
-    public void setTicketID(int ticketID) {
+    public void setTicketID(String ticketID) {
         this.ticketID = ticketID;
     }
 

@@ -4,13 +4,14 @@ public class Ticket {
     //instance variables
     private String ticketID;
     private double ticketPrice;
+    private String event;
 
 
     //constructor
-    public Ticket(String ticketID, double ticketPrice) {
+    public Ticket(String ticketID, double ticketPrice, String event) {
         this.ticketID = ticketID;
         this.ticketPrice = ticketPrice;
-
+        this.event = event;
     }
 
     //getters and setters

@@ -24,5 +24,10 @@ public class Main {
         Configuration configuration = new Configuration(totalTickets, ticketReleaseRate, customerRetrievalRate, maximumTicketCapacity);
 
         TicketPool ticketPool = new TicketPool(configuration.getMaxTicketCapacity());
+
+        Thread vendor1 = new Thread(new Vendor(ticketPool, configuration.getTicketReleaseRate()), "Vendor 1");
+        vendor1.start();
+        Thread vendor2 = new Thread (new Vendor(ticketPool, configuration.getTicketReleaseRate()), "Vendor 2");
+        vendor2.start();
     }
 }

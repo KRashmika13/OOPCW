@@ -24,6 +24,9 @@ public class TicketPool {
                 Thread.currentThread().interrupt();
             }
         }
+        tickets.add(ticket);
+        System.out.println("Added ticket: ID - T" + ticket.getTicketID() + "Price - " + ticket.getTicketPrice() + "Event - " + ticket.getEvent());
+        notifyAll();
     }
 
     //method to remove a ticket from the pool

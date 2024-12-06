@@ -5,6 +5,11 @@ public class Customer implements Runnable {
     private TicketPool ticketPool;
     private int customerRetrievalRate; //number of tickets to retrieve customer
 
+    public Customer(TicketPool ticketPool, int customerRetrievalRate) {
+        this.ticketPool = ticketPool;
+        this.customerRetrievalRate = customerRetrievalRate;
+    }
+
     @Override
     public void run() {
         while (true) {

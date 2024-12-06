@@ -39,5 +39,10 @@ public class TicketPool {
                 Thread.currentThread().interrupt();
             }
         }
+        Ticket ticket = tickets.remove(0);
+        System.out.println("Removed ticket: ID - T" + ticket.getTicketID());
+
+        notifyAll();
+        return ticket;
     }
 }

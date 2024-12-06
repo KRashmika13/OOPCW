@@ -26,7 +26,7 @@ public class TicketPool {
             }
         }
         tickets.add(ticket);
-        System.out.println("Added ticket: ID - T" + ticket.getTicketID() + "Price - " + ticket.getTicketPrice() + "Event - " + ticket.getEvent());
+        System.out.println("Added ticket: ID - " + ticket.getTicketID() + "Price - " + ticket.getTicketPrice() + "Event - " + ticket.getEvent());
         notifyAll();
     }
 

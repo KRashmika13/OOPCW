@@ -22,6 +22,7 @@ public class TicketPool {
                 wait(); //wait until there is space in the pool
             }catch (InterruptedException e){
                 Thread.currentThread().interrupt();
+                return;
             }
         }
         tickets.add(ticket);
@@ -37,6 +38,7 @@ public class TicketPool {
                 wait();
             }catch (InterruptedException e){
                 Thread.currentThread().interrupt();
+                return null;
             }
         }
         Ticket ticket = tickets.remove(0);

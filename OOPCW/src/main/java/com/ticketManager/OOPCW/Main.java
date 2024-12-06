@@ -29,5 +29,10 @@ public class Main {
         vendor1.start();
         Thread vendor2 = new Thread (new Vendor(ticketPool, configuration.getTicketReleaseRate()), "Vendor 2");
         vendor2.start();
+
+        Thread customer1 = new Thread(new Customer(ticketPool, configuration.getCustomerRetrievalRate()), "Customer 1");
+        customer1.start();
+        Thread customer2 = new Thread(new Customer(ticketPool, configuration.getCustomerRetrievalRate()), "Customer 2");
+        customer2.start();
     }
 }

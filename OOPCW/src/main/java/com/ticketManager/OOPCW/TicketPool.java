@@ -21,7 +21,7 @@ public class TicketPool {
                 System.out.println("Waiting for space");
                 wait(); //wait until there is space in the pool
             }catch (InterruptedException e){
-                e.printStackTrace();
+                Thread.currentThread().interrupt();
             }
         }
     }

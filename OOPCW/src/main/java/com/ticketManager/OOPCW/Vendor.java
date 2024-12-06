@@ -18,7 +18,7 @@ public class Vendor implements Runnable{
             try {
                 for (int i = 0; i < ticketReleaseRate; i++){
                     String ticketID = "T" + ticketCount;
-                    Ticket ticket = new Ticket(ticketID, 2000);
+                    Ticket ticket = new Ticket(ticketID, 2000, "Consert");
                     ticketPool.addTicket(ticket); // add ticket to the pool
                 }
                 Thread.sleep(2000); //simulate delay before next ticket release

@@ -17,7 +17,7 @@ public class Vendor implements Runnable{
         while (true){
             try {
                 for (int i = 0; i < ticketReleaseRate; i++){
-                    String ticketID = "T" + ticketCount;
+                    String ticketID = "T" + ticketCount++;
                     Ticket ticket = new Ticket(ticketID, 2000, "Consert");
                     ticketPool.addTicket(ticket); // add ticket to the pool
                 }

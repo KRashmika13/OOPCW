@@ -22,5 +22,7 @@ public class Main {
 
         //instantiate a configuration object
         Configuration configuration = new Configuration(totalTickets, ticketReleaseRate, customerRetrievalRate, maximumTicketCapacity);
+
+        TicketPool ticketPool = new TicketPool(configuration.getMaxTicketCapacity());
     }
 }

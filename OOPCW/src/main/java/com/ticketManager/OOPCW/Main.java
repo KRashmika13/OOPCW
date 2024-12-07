@@ -60,6 +60,5 @@ public class Main {
             System.err.println(e.getMessage());
         }
         System.out.println("System successfully end");
-        scan.close();
     }
 }

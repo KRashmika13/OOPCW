@@ -14,9 +14,10 @@ public class Vendor implements Runnable{
     @Override
     public void run() {
         int ticketCount = 1;
-        while (true){
+        while (Main.isRunning()){
             try {
                 for (int i = 0; i < ticketReleaseRate; i++){
+                    if (!Main.isRunning())break;
                     String ticketID = "T" + ticketCount++;
                     Ticket ticket = new Ticket(ticketID, 2000, "Consert");
                     ticketPool.addTicket(ticket); // add ticket to the pool
@@ -26,7 +27,7 @@ public class Vendor implements Runnable{
                 Thread.currentThread().interrupt();
                 break; //exit loop on interruption
             }
-
         }
+        System.out.println(Thread.currentThread().getName() + " is over");
     }
 }

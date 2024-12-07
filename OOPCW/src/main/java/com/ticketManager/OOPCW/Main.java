@@ -34,5 +34,25 @@ public class Main {
         customer1.start();
         Thread customer2 = new Thread(new Customer(ticketPool, configuration.getCustomerRetrievalRate()), "Customer 2");
         customer2.start();
+
+        System.out.println("System start with the following configuration:");
+        System.out.println("Total number of tickets: " + configuration.getTotalTickets());
+        System.out.println("Ticket release rate for vendor: " + configuration.getTicketReleaseRate());
+        System.out.println("Customer retrieval rate: " + configuration.getCustomerRetrievalRate());
+        System.out.println("Maximum ticket capacity: " + configuration.getMaxTicketCapacity());
+
+        System.out.println("Click enter to stop the system");
+        scan.nextLine();
+        scan.nextLine();
+
+        try {
+            vendor1.join();
+            vendor2.join();
+            customer1.join();
+            customer2.join();
+        } catch (InterruptedException e) {
+            System.err.println(e.getMessage());
+        }
+        System.out.println("System successfully end");
     }
 }

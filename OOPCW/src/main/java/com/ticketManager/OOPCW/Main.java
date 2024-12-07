@@ -3,7 +3,6 @@ package com.ticketManager.OOPCW;
 import java.util.Scanner;
 
 public class Main {
-    private static volatile boolean running = true;
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -47,7 +46,6 @@ public class Main {
         scan.nextLine();
         scan.nextLine();
 
-        running = false;
         vendor1.interrupt();
         vendor2.interrupt();
         customer1.interrupt();
@@ -65,7 +63,5 @@ public class Main {
         scan.close();
     }
 
-    public static boolean isRunning() {
-        return running;
-    }
+
 }

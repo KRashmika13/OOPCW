@@ -12,10 +12,9 @@ public class Customer implements Runnable {
 
     @Override
     public void run() {
-        while (Main.isRunning()) {
+        while (true) {
             try{
                 for(int i = 0; i < customerRetrievalRate; i++) {
-                    if (!Main.isRunning()) break;
                     Ticket ticket = ticketPool.removeTicket();
                 }
                 Thread.sleep(2000);

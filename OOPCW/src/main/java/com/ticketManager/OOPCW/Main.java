@@ -45,6 +45,12 @@ public class Main {
         scan.nextLine();
         scan.nextLine();
 
+        running = false;
+        vendor1.interrupt();
+        vendor2.interrupt();
+        customer1.interrupt();
+        customer2.interrupt();
+
         try {
             vendor1.join();
             vendor2.join();

@@ -6,11 +6,9 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Ticket {
-
+    //instance variables
     @Id
     @GeneratedValue
-    private Long id;
-    //instance variables
     private String ticketID;
     private double ticketPrice;
     private String event;

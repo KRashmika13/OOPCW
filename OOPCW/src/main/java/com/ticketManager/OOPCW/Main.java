@@ -1,12 +1,14 @@
 package com.ticketManager.OOPCW;
 
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Main {
 
+    private static final String config_file = "config.json";
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-
         System.out.println("Welcome to the Real-Time Event Ticketing System");
 
         System.out.println("Please enter the total number of tickets(): ");
@@ -23,6 +25,10 @@ public class Main {
 
         //instantiate a configuration object
         Configuration configuration = new Configuration(totalTickets, ticketReleaseRate, customerRetrievalRate, maximumTicketCapacity);
+        configuration.loadFromFile(config_file);
+        if (configuration == null) {
+            configuration.saveToFile(config_file);
+        }
 
         TicketPool ticketPool = new TicketPool(configuration.getMaxTicketCapacity());
 
@@ -62,6 +68,23 @@ public class Main {
         System.out.println("System successfully end");
         scan.close();
     }
-
+    private static int getIntInput(Scanner scan, String prompt) {
+        int value;
+        while (true) {
+            try {
+                System.out.print(prompt);
+                value = scan.nextInt();
+                if (value <= 0) {
+                    System.out.println("Value must be a positive integer. Please try again.");
+                } else {
+                    break;
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter a valid integer.");
+                scan.next(); // Clear invalid input
+            }
+        }
+        return value;
+    }
 
 }

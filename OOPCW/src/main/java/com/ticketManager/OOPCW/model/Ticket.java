@@ -1,9 +1,15 @@
 package com.ticketManager.OOPCW.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 
 @Entity
 public class Ticket {
+
+    @Id
+    @GeneratedValue
+    private Long id;
     //instance variables
     private String ticketID;
     private double ticketPrice;

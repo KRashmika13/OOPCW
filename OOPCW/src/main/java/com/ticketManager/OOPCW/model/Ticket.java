@@ -22,6 +22,8 @@ public class Ticket {
         this.event = event;
     }
 
+    public Ticket() {}
+
     //getters and setters
     public String getTicketID() {
         return ticketID;

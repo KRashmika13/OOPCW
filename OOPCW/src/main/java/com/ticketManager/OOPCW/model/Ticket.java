@@ -1,11 +1,13 @@
 package com.ticketManager.OOPCW.model;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class Ticket {
     //instance variables
     private String ticketID;
     private double ticketPrice;
     private String event;
-
 
     //constructor
     public Ticket(String ticketID, double ticketPrice, String event) {

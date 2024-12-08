@@ -1,4 +1,4 @@
-package com.ticketManager.OOPCW;
+package com.ticketManager.OOPCW.model;
 
 import com.google.gson.Gson;
 

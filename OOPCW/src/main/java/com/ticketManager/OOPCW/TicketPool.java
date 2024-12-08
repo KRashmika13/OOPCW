@@ -1,5 +1,7 @@
 package com.ticketManager.OOPCW;
 
+import com.ticketManager.OOPCW.model.Ticket;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Collections;

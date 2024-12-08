@@ -1,5 +1,7 @@
 package com.ticketManager.OOPCW;
 
+import com.ticketManager.OOPCW.model.Ticket;
+
 public class Vendor implements Runnable{
     //instance variables
     private TicketPool ticketPool;

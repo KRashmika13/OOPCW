@@ -1,4 +1,4 @@
-package com.ticketManager.OOPCW;
+package com.ticketManager.OOPCW.model;
 
 public class Ticket {
     //instance variables

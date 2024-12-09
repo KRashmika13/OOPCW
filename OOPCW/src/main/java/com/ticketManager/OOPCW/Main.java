@@ -1,6 +1,8 @@
 package com.ticketManager.OOPCW;
 
 import com.ticketManager.OOPCW.model.Configuration;
+import com.ticketManager.OOPCW.model.Customer;
+import com.ticketManager.OOPCW.model.Vendor;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;

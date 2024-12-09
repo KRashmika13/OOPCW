@@ -1,6 +1,6 @@
-package com.ticketManager.OOPCW;
+package com.ticketManager.OOPCW.model;
 
-import com.ticketManager.OOPCW.model.Ticket;
+import com.ticketManager.OOPCW.TicketPool;
 
 public class Vendor implements Runnable{
     //instance variables

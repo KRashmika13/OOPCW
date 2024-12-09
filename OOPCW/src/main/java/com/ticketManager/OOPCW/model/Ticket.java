@@ -6,6 +6,7 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Ticket {
+
     //instance variables
     @Id
     @GeneratedValue

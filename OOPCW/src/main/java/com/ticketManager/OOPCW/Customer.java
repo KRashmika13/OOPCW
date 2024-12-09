@@ -1,6 +1,6 @@
-package com.ticketManager.OOPCW.model;
+package com.ticketManager.OOPCW;
 
-import com.ticketManager.OOPCW.TicketPool;
+import com.ticketManager.OOPCW.model.Ticket;
 
 public class Customer implements Runnable {
     //instance variables

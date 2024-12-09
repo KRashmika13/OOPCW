@@ -7,6 +7,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface TicketRepository extends JpaRepository<Ticket, Integer> {
-    List<Ticket> findBySoldFalse();
+public interface TicketRepository extends JpaRepository<Ticket, String> {
+    // custom query to find ticket by event
+    List<Ticket> findByEvent(String event);
+
+    //custom query to find ticket by id
+    Ticket findByTicketId(String ticketId);
 }

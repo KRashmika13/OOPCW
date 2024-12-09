@@ -15,15 +15,15 @@ public class Vendor {
     @Id
     @GeneratedValue
     private String vendorId;
-    private String vendorName;
+    private String name;
     private String email;
     private int contactNo;
 
     public Vendor() {}
 
-    public Vendor(String vendorId, String vendorName, String email, int contactNo) {
+    public Vendor(String vendorId, String name, String email, int contactNo) {
         this.vendorId = vendorId;
-        this.vendorName = vendorName;
+        this.name = name;
         this.email = email;
         this.contactNo = contactNo;
     }

@@ -7,6 +7,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface VendorRepository extends JpaRepository<Vendor, String> {
 
-    //custom query to find vendor by id
+    //custom query to find vendor by name
     Vendor findByName(String Name);
+
+    //custom query to find vendor by Id
+    Vendor findByVendorId(String vendorId);
 }

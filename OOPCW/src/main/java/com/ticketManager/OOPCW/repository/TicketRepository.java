@@ -12,5 +12,5 @@ public interface TicketRepository extends JpaRepository<Ticket, String> {
     List<Ticket> findByEvent(String event);
 
     //custom query to find ticket by id
-    Ticket findByTicketId(String ticketId);
+    Ticket findByTicketID(String ticketID);
 }

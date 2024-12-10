@@ -8,9 +8,9 @@ import org.springframework.stereotype.Repository;
 public interface CustomerRepository extends JpaRepository<Customer, String> {
 
     //custom query to find customer by email
-    CustomerRepository findByEmail(String email);
+    Customer findByEmail(String email);
 
     //custom query to find customer by name
-    CustomerRepository findByName(String name);
+    Customer findByName(String name);
 
 }

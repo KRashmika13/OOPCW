@@ -30,8 +30,8 @@ public class VendorServiceImpl implements VendorService {
     }
 
     @Override
-    public Vendor getVendorByEmail(String email) {
-        return vendorRepository.findByName(email);
+    public Vendor getVendorByVendorId(String vendorId) {
+        return vendorRepository.findByVendorId(vendorId);
     }
 
     @Override

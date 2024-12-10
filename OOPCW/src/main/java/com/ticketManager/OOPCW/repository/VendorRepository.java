@@ -1,6 +1,6 @@
 package com.ticketManager.OOPCW.repository;
 
-import com.ticketManager.OOPCW.Vendor;
+import com.ticketManager.OOPCW.model.Vendor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

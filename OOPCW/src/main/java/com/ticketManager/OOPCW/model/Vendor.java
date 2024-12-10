@@ -3,13 +3,11 @@ package com.ticketManager.OOPCW.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.Table;
 
 
 @Entity
-@Getter
-@Setter
+@Table(name = "vendors")
 public class Vendor {
 
     @Id
@@ -28,4 +26,35 @@ public class Vendor {
         this.contactNo = contactNo;
     }
 
+    public String getVendorId() {
+        return vendorId;
+    }
+
+    public void setVendorId(String vendorId) {
+        this.vendorId = vendorId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getContactNo() {
+        return contactNo;
+    }
+
+    public void setContactNo(int contactNo) {
+        this.contactNo = contactNo;
+    }
 }

@@ -35,7 +35,7 @@ public class VendorController {
 
     // Endpoint to get vendor by ID
     @GetMapping("/vendorId/{vendorId}")
-    public Vendor getVendorById(@PathVariable String vendorId) {
+    public Vendor getVendorById(@PathVariable Long vendorId) {
         return vendorService.getVendorByVendorId(vendorId);
     }
 }

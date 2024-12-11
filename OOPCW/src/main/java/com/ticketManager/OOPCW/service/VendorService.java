@@ -11,7 +11,7 @@ public interface VendorService {
 
     List<Vendor> getAllVendors();
 
-    Vendor getVendorByVendorId(String vendorId);
+    Vendor getVendorByVendorId(Long vendorId);
 
     Vendor getVendorByName(String name);
 }

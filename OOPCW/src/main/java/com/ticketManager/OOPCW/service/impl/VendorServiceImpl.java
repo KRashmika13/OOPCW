@@ -30,7 +30,7 @@ public class VendorServiceImpl implements VendorService {
     }
 
     @Override
-    public Vendor getVendorByVendorId(String vendorId) {
+    public Vendor getVendorByVendorId(Long vendorId) {
         return vendorRepository.findByVendorId(vendorId);
     }
 

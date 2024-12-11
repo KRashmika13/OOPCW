@@ -11,5 +11,5 @@ public interface VendorRepository extends JpaRepository<Vendor, String> {
     Vendor findByName(String Name);
 
     //custom query to find vendor by Id
-    Vendor findByVendorId(String vendorId);
+    Vendor findByVendorId(Long vendorId);
 }

@@ -8,5 +8,5 @@ import java.util.List;
 public interface TicketService {
     Ticket saveTicket(TicketDTO ticketDTO);
     List<Ticket> getTicketsByEvent(String event);
-    Ticket getTicketByTicketID(String ticketID);
+    Ticket getTicketByTicketID(Long ticketID);
 }

@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 public class Customer {
     @Id
     @GeneratedValue
-    private String customerId;
+    private Long customerId;
     private String name;
     private String address;
     private String email;
@@ -20,7 +20,7 @@ public class Customer {
 
     public Customer() {}
 
-    public Customer(String customerId, String name, String address, String email, int contactNo) {
+    public Customer(Long customerId, String name, String address, String email, int contactNo) {
         this.customerId = customerId;
         this.name = name;
         this.address = address;
@@ -28,11 +28,11 @@ public class Customer {
         this.contactNo = contactNo;
     }
 
-    public String getCustomerId() {
+    public Long getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(String customerId) {
+    public void setCustomerId(Long customerId) {
         this.customerId = customerId;
     }
 

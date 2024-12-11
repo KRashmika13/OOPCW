@@ -12,25 +12,25 @@ public class Vendor {
 
     @Id
     @GeneratedValue
-    private String vendorId;
+    private Long vendorId;
     private String name;
     private String email;
     private int contactNo;
 
     public Vendor() {}
 
-    public Vendor(String vendorId, String name, String email, int contactNo) {
+    public Vendor(Long vendorId, String name, String email, int contactNo) {
         this.vendorId = vendorId;
         this.name = name;
         this.email = email;
         this.contactNo = contactNo;
     }
 
-    public String getVendorId() {
+    public Long getVendorId() {
         return vendorId;
     }
 
-    public void setVendorId(String vendorId) {
+    public void setVendorId(Long vendorId) {
         this.vendorId = vendorId;
     }
 

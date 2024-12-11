@@ -7,7 +7,7 @@ import jakarta.validation.constraints.Positive;
 public class TicketDTO {
 
     @NotBlank(message = "Ticket ID can't be blank")
-    private String ticketID;
+    private Long ticketID;
 
     @NotNull(message = "Price is required")
     @Positive(message = "Price must be a positive value")
@@ -19,17 +19,17 @@ public class TicketDTO {
     public TicketDTO() {
     }
 
-    public TicketDTO(String ticketID, double price, String event) {
+    public TicketDTO(Long ticketID, double price, String event) {
         this.ticketID = ticketID;
         this.price = price;
         this.event = event;
     }
 
-    public String getTicketID() {
+    public Long getTicketID() {
         return ticketID;
     }
 
-    public void setTicketID(String ticketID) {
+    public void setTicketID(Long ticketID) {
         this.ticketID = ticketID;
     }
 

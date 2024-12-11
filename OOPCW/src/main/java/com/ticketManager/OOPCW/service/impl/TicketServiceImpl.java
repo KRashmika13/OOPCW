@@ -30,7 +30,7 @@ public class TicketServiceImpl implements TicketService {
     }
 
     @Override
-    public Ticket getTicketByTicketID(String ticketID) {
+    public Ticket getTicketByTicketID(Long ticketID) {
         return ticketRepository.findByTicketID(ticketID);
     }
 }

@@ -12,12 +12,12 @@ public class Ticket {
     //instance variables
     @Id
     @GeneratedValue
-    private String ticketID;
+    private Long ticketID;
     private double ticketPrice;
     private String event;
 
     //constructor
-    public Ticket(String ticketID, double ticketPrice, String event) {
+    public Ticket(Long ticketID, double ticketPrice, String event) {
         this.ticketID = ticketID;
         this.ticketPrice = ticketPrice;
         this.event = event;
@@ -26,11 +26,11 @@ public class Ticket {
     public Ticket() {}
 
     //getters and setters
-    public String getTicketID() {
+    public Long getTicketID() {
         return ticketID;
     }
 
-    public void setTicketID(String ticketID) {
+    public void setTicketID(Long ticketID) {
         this.ticketID = ticketID;
     }
 
